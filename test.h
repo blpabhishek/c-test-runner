@@ -8,7 +8,8 @@ typedef struct test
 {
   char *name;
   int failed;
-  void (*int_eq)(struct test *, int, int);
+  void (*int_eq)(struct test *t, int actual, int expected);
+  char *err;
 } Tester;
 
 typedef struct
